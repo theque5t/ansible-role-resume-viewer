@@ -1,0 +1,90 @@
+resume_viewer_resume: "{{
+  resume
+  | default({
+      'contact': {
+        'first_name': '<first_name>',
+        'middle_name': '<middle_name>',
+        'last_name': '<last_name>',
+        'phone': '<phone>',
+        'email': '<email>',
+        'linkedin': '<linkedin>',
+        'github': '<github>'
+      },
+      'summary': '<This is an example summary sentence. This is an example summary sentence. This is an example summary sentence. This is an example summary sentence.>',
+      'experience': [
+        {
+          'title': '<title>',
+          'company': '<company>',
+          'location': '<location>',
+          'start_date': '<start_date>',
+          'end_date': '<end_date>',
+          'description':
+            [
+              'This is an example description sentence.',
+              'This is an example description sentence. This is an example description sentence. This is an example description sentence.',
+              'This is an example description sentence. This is an example description sentence.'
+            ]
+        },
+        {
+          'title': '<title>',
+          'company': '<company>',
+          'location': '<location>',
+          'start_date': '<start_date>',
+          'end_date': '<end_date>',
+          'description':
+            [
+              'This is an example description sentence.',
+              'This is an example description sentence. This is an example description sentence. This is an example description sentence.',
+              'This is an example description sentence. This is an example description sentence.'
+            ]
+        },
+        {
+          'title': '<title>',
+          'company': '<company>',
+          'location': '<location>',
+          'start_date': '<start_date>',
+          'end_date': '<end_date>',
+          'description':
+            [
+              'This is an example description sentence.',
+              'This is an example description sentence. This is an example description sentence. This is an example description sentence.',
+              'This is an example description sentence. This is an example description sentence.'
+            ]
+        }
+      ]
+    })
+}}"
+
+resume_viewer_title_header_template: >-
+  {{ [ resume_viewer_resume.contact.first_name,
+       resume_viewer_resume.contact.middle_name,
+       resume_viewer_resume.contact.last_name] | 
+       select('string') |
+       join(' ') }}
+resume_viewer_title_body_template: "{{ omit }}"
+resume_viewer_summary_header_template: Summary
+resume_viewer_summary_body_template: |
+
+  {{  resume_viewer_resume.summary | wordwrap(60) | indent(4, first=True) }}
+
+resume_viewer_experience_header_template: Experience
+resume_viewer_experience_body_template: |-
+
+  {{ (job.title+' @ '+job.company) | indent(4, first=True) }}
+  {{ (job.start_date+' - '+ job.end_date) | indent(4, first=True) }}
+  {{ job.location | indent(4, first=True) }}
+  {{ '------------------------------------------------------------------------' | indent(4, first=True) }}
+  
+  {% for item in job.description %}
+      - {{ item | wordwrap(60) | indent(6) }}
+
+  {% endfor %}
+
+resume_viewer_contact_header_template: Contact Information
+resume_viewer_contact_body_template: |
+
+  {% for key, value in resume_viewer_resume.contact.items() %}
+  {% if key in ['mobile', 'email', 'linkedin', 'github'] %}
+  {{ "- %-10s: %s" | format((key | capitalize), value) | wordwrap(60) | indent(4, first=True) }}
+  {% endif %}
+  {% endfor %}

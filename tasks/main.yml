@@ -1,0 +1,20 @@
+---
+- name: "{{ resume_viewer_title_header_template }}"
+  pause:
+    prompt: "{{ resume_viewer_title_body_template }}"
+
+- name: "{{ resume_viewer_summary_header_template }}"
+  pause:
+    prompt: "{{ resume_viewer_summary_body_template }}"
+
+- name: "{{ resume_viewer_experience_header_template }}"
+  pause:
+    prompt: "{{ resume_viewer_experience_body_template }}"
+  loop: '{{ resume_viewer_resume.experience }}'
+  loop_control:
+    loop_var: job 
+    label: ''
+
+- name: "{{ resume_viewer_contact_header_template }}"
+  pause:
+    prompt: "{{ resume_viewer_contact_body_template }}"

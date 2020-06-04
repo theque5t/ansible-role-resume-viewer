@@ -1,0 +1,25 @@
+---
+dependencies: []
+
+galaxy_info:
+  role_name: resume_viewer
+  author: theque5t
+  description: View a resume.
+  company: 
+  license: "license (BSD, MIT)"
+  min_ansible_version: 2.9.9
+  platforms:
+    - name: Ubuntu
+      versions:
+        - bionic
+  galaxy_tags:
+    - resume
+    - applicant
+    - view
+    - read
+    - pause
+    - Resume as code
+    - RaC
+    - Everything as code
+    - EaC
+  
