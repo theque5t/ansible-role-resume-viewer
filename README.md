@@ -34,11 +34,11 @@ Variable specifications are listed below (see also `default/main.yml`):
   'summary': '<This is an example summary sentence. This is an example summary sentence. This is an example summary sentence. This is an example summary sentence.>',
   'experience': [
     {
-      'title': '<title>'
-      'company': '<company>'
-      'location': '<location>'
-      'start_date': '<start_date>'
-      'end_date': '<end_date>'
+      'title': '<title>',
+      'company': '<company>',
+      'location': '<location>',
+      'start_date': '<start_date>',
+      'end_date': '<end_date>',
       'description':
         [
           'This is an example description sentence.',
@@ -47,11 +47,11 @@ Variable specifications are listed below (see also `default/main.yml`):
         ]
     },
     {
-      'title': '<title>'
-      'company': '<company>'
-      'location': '<location>'
-      'start_date': '<start_date>'
-      'end_date': '<end_date>'
+      'title': '<title>',
+      'company': '<company>',
+      'location': '<location>',
+      'start_date': '<start_date>',
+      'end_date': '<end_date>',
       'description':
         [
           'This is an example description sentence.',
@@ -60,11 +60,11 @@ Variable specifications are listed below (see also `default/main.yml`):
         ]
     },
     {
-      'title': '<title>'
-      'company': '<company>'
-      'location': '<location>'
-      'start_date': '<start_date>'
-      'end_date': '<end_date>'
+      'title': '<title>',
+      'company': '<company>',
+      'location': '<location>',
+      'start_date': '<start_date>',
+      'end_date': '<end_date>',
       'description':
         [
           'This is an example description sentence.',
