@@ -5,7 +5,7 @@ galaxy_info:
   role_name: resume_viewer
   author: theque5t
   description: View a resume.
-  company: 
+  company:
   license: "license (BSD, MIT)"
   min_ansible_version: 2.9.9
   platforms:
@@ -18,8 +18,5 @@ galaxy_info:
     - view
     - read
     - pause
-    - Resume as code
-    - RaC
-    - Everything as code
-    - EaC
-  
+    - resume-as-code
+    - everything-as-code
