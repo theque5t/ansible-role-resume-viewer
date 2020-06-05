@@ -1,0 +1,29 @@
+---
+language: python
+python: "3.6"
+sudo: false
+addons:
+  apt:
+    packages:
+    - python-pip3
+
+env:
+  global:
+    - ROLE_NAME: resume_viewer
+
+install:
+  - pip3 install ansible ansible-lint
+  - ansible --version
+
+before_script:
+  - cd ../
+  - mv ansible-role-$ROLE_NAME theque5t.$ROLE_NAME
+  - cd theque5t.$ROLE_NAME
+
+script:
+  - ansible-lint tests/test.yml
+  - ansible-playbook -i localhost, --syntax-check tests/test.yml
+  - echo | ansible-playbook -i localhost, tests/test.yml
+
+# notifications:
+#   webhooks: https://galaxy.ansible.com/api/v1/notifications/
