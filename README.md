@@ -1,8 +1,9 @@
 Role Name
 =========
 
-Ansible role for resume viewing.
+[![Build Status](https://travis-ci.com/theque5t/ansible-role-resume-viewer.svg?branch=master)](https://travis-ci.com/theque5t/ansible-role-resume-viewer)
 
+Ansible role for resume viewing.
 
 [![asciicast](https://asciinema.org/a/lDrThsLjvtQvfiQ4VuJDzLaKl.svg)](https://asciinema.org/a/lDrThsLjvtQvfiQ4VuJDzLaKl?autoplay=true&loop=true)
 
