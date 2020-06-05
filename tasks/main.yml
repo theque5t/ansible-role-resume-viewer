@@ -12,7 +12,7 @@
     prompt: "{{ resume_viewer_experience_body_template }}"
   loop: '{{ resume_viewer_resume.experience }}'
   loop_control:
-    loop_var: job 
+    loop_var: job
     label: ''
 
 - name: "{{ resume_viewer_contact_header_template }}"
