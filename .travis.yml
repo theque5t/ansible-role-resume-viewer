@@ -22,5 +22,5 @@ script:
   - ansible-playbook -i localhost, --syntax-check tests/test.yml
   - echo | ansible-playbook -i localhost, tests/test.yml
 
-# notifications:
-#   webhooks: https://galaxy.ansible.com/api/v1/notifications/
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/
